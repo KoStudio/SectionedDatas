@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SectionedDatas_Example' do
+  pod 'SectionedDatas', :path => '../'
+
+  target 'SectionedDatas_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
