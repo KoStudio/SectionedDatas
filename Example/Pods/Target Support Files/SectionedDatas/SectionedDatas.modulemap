@@ -1,0 +1,6 @@
+framework module SectionedDatas {
+  umbrella header "SectionedDatas-umbrella.h"
+
+  export *
+  module * { export * }
+}

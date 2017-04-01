@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SectionedDatas'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SectionedDatas.'
+  s.version          = '1.0.0'
+  s.summary          = 'A sectioned datas collection,very simple to use.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Your can add sections with datas into SectionedDatas, and then access sections or datas very esay.This can be very useful when showing datas to UITableView with section headers.
                        DESC
 
-  s.homepage         = 'https://github.com/KoStudio/SectionedDatas'
+  s.homepage         = 'https://github.com/KoStudio/SectionedDatas.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'KoStudio' => '44663768@163.com' }
@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
   #   'SectionedDatas' => ['SectionedDatas/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  #s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

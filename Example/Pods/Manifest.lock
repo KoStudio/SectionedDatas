@@ -1,0 +1,16 @@
+PODS:
+  - SectionedDatas (0.1.0)
+
+DEPENDENCIES:
+  - SectionedDatas (from `../`)
+
+EXTERNAL SOURCES:
+  SectionedDatas:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SectionedDatas: 71a5f0c134395de23d27c8b6bd268f0d21e13db4
+
+PODFILE CHECKSUM: 66f723ca294d07ea7e2d19159913fc52e3717d7f
+
+COCOAPODS: 1.2.0
