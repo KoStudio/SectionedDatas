@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Your can add sections with datas into SectionedDatas, and then access sections or datas very esay.This can be very useful when showing datas to UITableView with section headers.
+You can add sections with datas into SectionedDatas, and then access sections or datas very esay.This can be very useful when showing datas to UITableView with section headers.
                        DESC
 
   s.homepage         = 'https://github.com/KoStudio/SectionedDatas.git'
