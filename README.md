@@ -10,6 +10,18 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 ![sample](https://github.com/KoStudio/SectionedDatas/blob/master/demo1.png)
 
+## Installation
+
+SectionedDatas is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "SectionedDatas"
+```
+
+## Get Start
+Just create a instance of SectionedDatas or it's subclass, and then add your datas with sections into it.
+
 ```swift
     private func createSectionDatasWithData() -> SectionedString {
         let datas = SectionedDatas<String, String>()
@@ -37,16 +49,73 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ```
 
-## Requirements
-
-## Installation
-
-SectionedDatas is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "SectionedDatas"
+## Usage
+```swift
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.datas.allSections().count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let ds =  self.datas.allDatas(atSectionIndex: section){
+            return ds.count
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.datas.section(ofIndex: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = self.datas.allDatas(atSectionIndex: indexPath.section)?[indexPath.row]
+        return cell!
+    }
 ```
+    
+
+## Optional Functions
+```swift
+    //MARK: -
+    public func add(section: S)
+    public func add(section: S, with data: D)
+    public func add(section: S, with datas: [D]) 
+    
+    //MARK: -
+    public func section(ofData data: D) -> S?
+    public func section(ofIndex index: Int)->S? 
+    
+    //MaRK: -
+    public func contains(section: S) -> Bool 
+    public func contains(data: D, within section: S) -> Bool
+    public func contains(data: D) -> Bool
+    
+    //MARK: -
+    public func index(of data: D, within section: S) -> Int? 
+    public func index(ofSection section: S) -> Int?
+    public func indexOfAll(fromIndex indexWithinSection: Int, withinSection sectionIndex: Int) -> Int? 
+    public func indexOfAll(fromData data: D, withinSection section: S) -> Int? 
+    
+    //MARK: -
+    public func allSections() -> [S]
+    public func allDatas(ofSection section: S) -> [D]? 
+    public func allDatas(atSectionIndex sectionIndex: Int) -> [D]?
+    public func allDatas() -> [D] 
+    
+    //MARK: -
+    public func removeAll()
+    public func remove(at indexOfSection: Int)
+    public func remove(section: S)
+    public func remove(data: D, within section: S)
+    
+    //MARK: -
+    public func enumerate(involk: (S, D)->())
+    public func enumerate(section: S, involk: (D)->())
+    
+    //MARK: -
+    public func makeIterator() -> SectionedIterator<S, D>
+```
+
+
 
 ## Author
 
