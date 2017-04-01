@@ -13,5 +13,5 @@ before_install:
 script:  
 #- set -o pipefail && xcodebuild test -workspace Example/SectionedDatas.xcworkspace -scheme SectionedDatas-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
 - set -o pipefail
-- xcodebuild clean test -workspace Example/SectionedDatas.xcworkspace -scheme SectionedDatas-Sample -destination 'platform=iOS Simulator,name=iPhone 6' | xcpretty
+- xcodebuild clean test -workspace Example/SectionedDatas.xcworkspace -scheme SectionedDatas-Example -destination 'platform=iOS Simulator,name=iPhone 6s' | xcpretty
 - pod lib lint
