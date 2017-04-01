@@ -8,7 +8,7 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-![sample](https://github.com/KoStudio/SectionedDatas/blob/master/Demo1.gif)
+![sample](https://github.com/KoStudio/SectionedDatas/blob/master/demo1.png)
 
 ```swift
     private func createSectionDatasWithData() -> SectionedString {
