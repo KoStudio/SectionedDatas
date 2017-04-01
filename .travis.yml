@@ -2,7 +2,7 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8.2.1
+osx_image: xcode8.3
 language: objective-c
 cache: cocoapods
 podfile: Example/Podfile
@@ -13,5 +13,5 @@ before_install:
 script:  
 #- set -o pipefail && xcodebuild test -workspace Example/SectionedDatas.xcworkspace -scheme SectionedDatas-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
 - set -o pipefail
-- xcodebuild clean test -workspace Example/SectionedDatas.xcworkspace -scheme SectionedDatas-Example -destination 'platform=iOS Simulator,name=iPhone 6' | xcpretty
+- xcodebuild clean test -workspace Example/SectionedDatas.xcworkspace -scheme SectionedDatas_Tests -destination 'platform=iOS Simulator,name=iPhone 6' | xcpretty
 - pod lib lint
