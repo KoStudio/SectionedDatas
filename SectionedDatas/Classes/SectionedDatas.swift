@@ -174,15 +174,15 @@ open class SectionedDatas<S: Equatable, D: Equatable> {
     }
     
     //MARK: -
-    public func enumerate(involk: (S, D)->()){
+    public func enumerate(invoke: (S, D)->()){
         for s in sections {
-            enumerate(section: s){d in involk(s, d)}
+            enumerate(section: s){d in invoke(s, d)}
         }
     }
-    public func enumerate(section: S, involk: (D)->()){
+    public func enumerate(section: S, invoke: (D)->()){
         if let e = allDatas(ofSection: section)?.enumerated(){
             for d in e{
-                involk(d.element)
+                invoke(d.element)
             }
         }
     }

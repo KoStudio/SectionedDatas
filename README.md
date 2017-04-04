@@ -108,8 +108,8 @@ Just create a instance of SectionedDatas or it's subclass, and then add your dat
     public func remove(data: D, within section: S)
     
     //MARK: -
-    public func enumerate(involk: (S, D)->())
-    public func enumerate(section: S, involk: (D)->())
+    public func enumerate(invoke: (S, D)->())
+    public func enumerate(section: S, invoke: (D)->())
     
     //MARK: -
     public func makeIterator() -> SectionedIterator<S, D>
