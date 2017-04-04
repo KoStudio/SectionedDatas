@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SectionedDatas'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A sectioned datas collection,very simple to use.'
 
 # This description is used to generate tags and improve search results.
